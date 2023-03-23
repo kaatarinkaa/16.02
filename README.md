@@ -38,3 +38,47 @@ int main()
 //if (atz[3] == atbild) { cout << name[3] << endl; }
 //else cout << "nav";
 }
+
+
+CREATE TABLE EMPLOYEE (
+  Id INTEGER PRIMARY KEY,
+  kurjera_v TEXT NOT NULL,
+  kurjera_u TEXT NOT null,
+  rajons TEXT NOT NULL,
+  vecums INTEGER NOT NULL,
+  dzimums text not null
+  );
+  INSERT INTO EMPLOYEE VALUES (1, 'Alla', 'Kotova', 'Riga',32, 'sieviete' );
+  INSERT INTO EMPLOYEE VALUES (2, 'Vlads', 'Krastiņš', 'Riga',45, 'virietis');
+  INSERT INTO EMPLOYEE VALUES (3, 'Grigorijs', 'Galds', 'ogres rajons',33, 'virietis' );
+  INSERT INTO EMPLOYEE VALUES (4, 'Kira', 'Klimova', 'saulkrastu novads',56, 'sieviete');
+  SELECT* FROM EMPLOYEE;
+  SELECT* FROM EMPLOYEE;
+  SELECT* FROM EMPLOYEE where vecums> 45;
+  SELECT* FROM EMPLOYEE where rajons = 'Riga' and dzimums = 'virietis';
+  SELECT avg (vecums)
+  FROM EMPLOYEE;
+  SELECT min (vecums)
+  FROM EMPLOYEE;
+CREATE TABLE EMPLOYEE (
+emlpoye_ID INTEGER NOT NULL,
+kurjera_v TEXT NOT NULL,
+kurjera_u TEXT NOT NULL,
+customer_ID INTEGER NOT NULL,
+customer_name TEXT NOT NULL,
+pilseta TEXT NOT NULL
+);
+-- insert
+INSERT INTO EMPLOYEE VALUES (1, 'Thomas(Neo)', 'Anderson', 1, 'Jewelry Store', 'London');
+INSERT INTO EMPLOYEE VALUES (1, 'Thomas(Neo)', 'Anderson', 2, 'Bakery', 'London');
+INSERT INTO EMPLOYEE VALUES (1, 'Thomas(Neo)', 'Anderson', 3, 'Cafe', 'London');
+INSERT INTO EMPLOYEE VALUES (1, 'Thomas(Neo)', 'Anderson', 4, 'Restaurant', 'London');
+INSERT INTO EMPLOYEE VALUES (2, 'Agent', 'Smith', 1,'Jewelry Store', 'Cardiff');
+INSERT INTO EMPLOYEE VALUES (2, 'Agent', 'Smith', 2,'Bakery', 'Cardiff');
+INSERT INTO EMPLOYEE VALUES (2, 'Agent', 'Smith', 3,'Cafe', 'Cardiff');
+INSERT INTO EMPLOYEE VALUES (2, 'Agent', 'Smith', 4,'Restaurant', 'Cardiff');
+-- fetch
+SELECT * FROM EMPLOYEE WHERE customer_name='Bakery';
+SELECT * FROM EMPLOYEE WHERE emlpoye_ID=4 and kurjera_u='Anderson';
+SELECT AVG(customer_ID) FROM EMPLOYEE;
+SELECT MIN(customer_ID) FROM EMPLOYEE;
